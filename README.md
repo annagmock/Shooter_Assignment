@@ -5,4 +5,4 @@ Scripts for Shooter project assignment – Player and Enemy modifications
 - Player.cs modified for left and right movement only
 - Shooting bullets upward fixed
   
-   ## Task 2 - Enemy 2 - Done by Mauricio 
+## Task 2 - Enemy 2 - Done by Mauricio 
