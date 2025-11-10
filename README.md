@@ -1,8 +1,9 @@
 # Shooter_Assignment
 Scripts for Shooter project assignment – Player and Enemy modifications
 
-## Task 1 - Player Movement - Done by Anna Grace Mock
-- Player.cs modified for left and right movement only
-- Shooting bullets upward fixed
+## Task 1 - Score Text done by Anna Grace Mock
+-added a score text on the top left of the screen
+-code that makes the score go up
   
-## Task 2 - Enemy 2 - Done by Mauricio 
+## Task 2 - Coin collectible one by Mauricio 
+-a coin that is collected by the player that raises the score
