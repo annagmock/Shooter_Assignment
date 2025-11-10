@@ -1,6 +1,5 @@
 # Shooter_Assignment
-Scripts for Shooter project assignment – Player and Enemy modifications
-
+Scripts for Shooter project assignment – Week 12
 ## Task 1 - Score Text done by Anna Grace Mock
 -added a score text on the top left of the screen
 -code that makes the score go up
