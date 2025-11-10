@@ -11,4 +11,4 @@ Scripts for Shooter project assignment – Week 12
 1. Open the Shooter scene
 2. Press Play
 3. The score appears on the top-left
-4. Press Space (temporary test) to add points
+4. collect coins to raise your score
