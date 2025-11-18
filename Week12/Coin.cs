@@ -2,18 +2,33 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public float lifetime = 3f;
-
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject, lifetime); 
+       
+        Player player = other.GetComponentInParent<Player>();
+        if (player != null)
+        {
+       
+            if (ScoreManager.instance != null)
+            {
+                ScoreManager.instance.AddScore(1);
+            }
+            else
+            {
+                Debug.LogError("ScoreManager instance is null!");
+            }
+
+       
+            Destroy(gameObject);
+        }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void Update()
     {
-        if (!other.CompareTag("Player")) return;
-
-        FindObjectOfType<GameManager>().AddScore(1);
-        Destroy(gameObject);
+       
+        if (transform.position.y < -6f) 
+        {
+            Destroy(gameObject);
+        }
     }
 }
