@@ -1,27 +1,34 @@
+using System.Collections;
 using UnityEngine;
 
 public class CoinSpawner : MonoBehaviour
 {
-    public GameObject coinPrefab;
-    public float spawnInterval = 5f; // every 5 seconds
-    public float coinLifetime = 3f;  // stays for 3 seconds
-    public float xRange = 8f;        // adjust for your screen width
-    public float yRange = 4f;        // adjust for your screen height
+    public GameObject coinPrefab;    
+    public int coinsPerSpawn = 3;    
+    public float spawnInterval = 2f; 
+    public float minX = -8f;         
+    public float maxX = 8f;          
+    public float spawnY = 6f;       
 
     void Start()
     {
-        InvokeRepeating("SpawnCoin", 2f, spawnInterval); // start spawning after 2s
+        StartCoroutine(SpawnCoinsRoutine());
     }
 
-    void SpawnCoin()
+    IEnumerator SpawnCoinsRoutine()
     {
-        // pick a random position
-        Vector2 randomPos = new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange));
+        while(true)
+        {
+            for (int i = 0; i < coinsPerSpawn; i++)
+            {
+                
+                float randomX = Random.Range(minX, maxX);  
+                Vector3 spawnPos = new Vector3(randomX, spawnY, 0); // Y stays the same
 
-        // spawn the coin
-        GameObject coin = Instantiate(coinPrefab, randomPos, Quaternion.identity);
+                Instantiate(coinPrefab, spawnPos, Quaternion.identity);
+            }
 
-        // destroy it after a few seconds
-        Destroy(coin, coinLifetime);
+            yield return new WaitForSeconds(spawnInterval);
+        }
     }
 }
