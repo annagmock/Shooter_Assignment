@@ -1,14 +1,14 @@
 # Shooter_Assignment
-Scripts for Shooter project assignment – Week 12
-## Task 1 - Score Text done by Anna Grace Mock
--added a score text on the top left of the screen
--code that makes the score go up
+Scripts for Shooter project assignment – Week 13
+## Task 1 - Shield Powerup done by Anna Grace Mock
+-Added a cube-shaped shield that spawns when the player grabs the orb
+-Lasts for 10 seconds
   
-## Task 2 - Coin collectible one by Mauricio Guzman
--a coin that is collected by the player that raises the score
+## Task 2 - Shield Powerup Audio by Mauricio Guzman
+
 
 # Instructions:
 1. Open the Shooter scene
 2. Press Play
-3. The score appears on the top-left
-4. collect coins to raise your score
+3. Grab the white orb on the left
+4. Cube shield appears for 10 seconds
