@@ -3,18 +3,18 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance; // Singleton instance
+    public static ScoreManager instance; 
 
-    public TextMeshProUGUI scoreText; // Drag your TMP UI Text here
+    public TextMeshProUGUI scoreText; 
     private int score = 0;
 
     void Awake()
     {
-        // Set the singleton instance
+        
         if (instance == null)
             instance = this;
         else
-            Destroy(gameObject); // only one instance allowed
+            Destroy(gameObject); 
     }
 
     void Start()
@@ -28,3 +28,4 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 }
+
