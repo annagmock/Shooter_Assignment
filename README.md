@@ -12,3 +12,6 @@ Scripts for Shooter project assignment – Week 13
 2. Press Play
 3. Grab the white orb on the left
 4. Cube shield appears for 10 seconds
+
+Youtube Link:
+https://youtu.be/kZZ8vubW3Qo
